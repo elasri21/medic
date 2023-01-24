@@ -1,0 +1,106 @@
+// header 
+header {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1111;
+    height: 61px;
+    .container {
+        position: relative;
+        .logo {
+            a {
+                gap: 6px;
+                span {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $main-c;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        nav {
+            margin-left: auto;
+            background-color: $white;
+            @media (min-width: 922px) {
+                display: block !important;
+                ul {
+                    align-items: center;
+                }
+            }
+            @media (max-width: 921px) {
+                position: absolute;
+                top: -100%;
+                opacity: 0;
+                display: none;
+                transition: .4s;
+                left: 0;
+                width: 100%;
+                padding: 15px 10px;
+                border-radius: 2px;
+                box-shadow: 10px 10px 10px rgba($text-c, .5);
+                ul {
+                    flex-direction: column;
+                }
+            }
+            ul {
+                display: flex;
+                gap: 20px;
+                li {
+                    a {
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        color: $title-c;
+                        &:hover {
+                            color: $main-c;
+                        }
+                    }
+                }
+            }
+        }
+        .toggle-menu {
+            @media (min-width: 922px) {
+                display: none !important;
+            }
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            margin-left: auto;
+            cursor: pointer;
+            .bar {
+                width: 30px;
+                height: 2px;
+                background-color: $title-c;
+                position: absolute;
+                transition: .3s;
+                left: 0;
+                &.bar-1 {
+                    top: 5px;
+                }
+                &.bar-2 {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &.bar-3 {
+                    bottom: 5px;
+                }
+            }
+            &.clicked {
+                .bar-2 {
+                    opacity: 0;
+                }
+                .bar-1 {
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                .bar-3 {
+                    bottom: 12px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.button {
+    display: block;
+    width: fit-content;
+    padding: 15px 40px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &.bg-white {
+        background-color: $white;
+        border-color: $white;
+        color: $main-c;
+        &:hover {
+            box-shadow: 10px 10px 20px $white;
+        }
+    }
+    &.bg-blue {
+        background-color: $main-c;
+        border-color: $main-c;
+        color: $white;
+        &:hover {
+            box-shadow: $hover-c;
+        }
+    }
+}
