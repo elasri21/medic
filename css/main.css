@@ -945,6 +945,7 @@ footer .container .go-up {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  opacity: 0;
 }
 footer .container .go-up i {
   color: #fff;
