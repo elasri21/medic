@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const goUp = document.querySelector(".go-up");
 const nav = document.querySelector("nav");
 const toggleMenu = document.querySelector(".toggle-menu");
 //const goUp = document.querySelector(".go-up");
@@ -69,4 +69,13 @@ questions.forEach(q => {
         this.nextElementSibling.classList.remove("hide");
         this.classList.add("active");
     });
+});
+
+// go up
+window.addEventListener("scroll", function() {
+    if(this.scrollY < 300) {
+        goUp.style.opacity = "0";
+    } else if(this.scrollY > 400) {
+        goUp.style.opacity = "1";
+    }
 })
